@@ -1,0 +1,14 @@
+.bounding-box {
+    position: absolute;
+    box-shadow: 0 0 0 3px var(--color-complement-0) inset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#face-image {
+    width: 600px;
+    height: 'auto';
+}
+
