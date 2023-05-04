@@ -9,7 +9,7 @@ const ImageLinkForm = ({ onInputChange, onDetectSubmit, validImage, hasFace, ini
       <div className='f3-ns f6 tc center pb3 w-80'>
           {'Enter the URL of an image below to detect colors and any faces present!'}
       </div>
-      <div className='form pa3 center w-80'>
+      <div className='form pa3 center w-80-ns w-100'>
         <input
           type="text"
           id="input-field"
@@ -17,7 +17,7 @@ const ImageLinkForm = ({ onInputChange, onDetectSubmit, validImage, hasFace, ini
           onChange={onInputChange}
         />
         <button
-          className='w-30 f4-ns f6 link pv2 br2 shadow-5 b ml1'
+          className='w-40 f4-ns f6 link pv2 br2 shadow-5 b ml1 tc'
           onClick={onDetectSubmit}
           id="sign-in-btn"
           value='Detect'>{detectButtonLabel}</button>

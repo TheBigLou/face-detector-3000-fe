@@ -76,7 +76,7 @@ class App extends Component {
   }
 
   validateImageUrl = async (url) => {
-    const response = await fetch('http://localhost:3000/validate-image', {
+    const response = await fetch('https://face-detector-3000-be.fly.dev/validate-image', {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -161,7 +161,7 @@ class App extends Component {
   }
 
   faceDetect = () => {
-    fetch('http://localhost:3000/face-detect', {
+    fetch('https://face-detector-3000-be.fly.dev/face-detect', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -173,7 +173,7 @@ class App extends Component {
       if (data.status.code === 10000 && data.outputs[0].data.regions) {
         this.setState({ hasFace: true });
         this.drawFaceBox(this.calculateFaceLocation(data));
-        fetch('http://localhost:3000/rank', {
+        fetch('https://face-detector-3000-be.fly.dev/rank', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -198,7 +198,7 @@ class App extends Component {
   }
 
   colorRecognition = () => {
-    fetch('http://localhost:3000/color-recognition', {
+    fetch('https://face-detector-3000-be.fly.dev/color-recognition', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
